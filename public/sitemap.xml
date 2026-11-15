@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://mehdii-dehghanm.github.io/portfolio/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mehdii-dehghanm.github.io/portfolio/#/en"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://mehdii-dehghanm.github.io/portfolio/#/fa"/>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://mehdii-dehghanm.github.io/portfolio/#/project/the-vand</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mehdii-dehghanm.github.io/portfolio/#/project/kronomatik-horology</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mehdii-dehghanm.github.io/portfolio/#/project/xav-specialty-coffee</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mehdii-dehghanm.github.io/portfolio/#/project/void-atelier</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mehdii-dehghanm.github.io/portfolio/#/project/arshia-gold-gallery</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mehdii-dehghanm.github.io/portfolio/#/project/sepahan-baft-zagros</loc>
+    <priority>0.8</priority>
+  </url>
+</urlset>

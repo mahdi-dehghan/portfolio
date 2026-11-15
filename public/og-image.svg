@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <radialGradient id="ogGlow" cx="80%" cy="20%" r="60%">
+      <stop offset="0%" stop-color="#C6F36A" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#20211F" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="#20211F"/>
+  <rect width="1200" height="630" fill="url(#ogGlow)"/>
+
+  <!-- Border details -->
+  <rect x="40" y="40" width="1120" height="550" fill="none" stroke="#343632" stroke-width="1"/>
+  <circle cx="40" cy="40" r="3" fill="#C6F36A"/>
+  <circle cx="1160" cy="40" r="3" fill="#C6F36A"/>
+  <circle cx="40" cy="590" r="3" fill="#C6F36A"/>
+  <circle cx="1160" cy="590" r="3" fill="#C6F36A"/>
+
+  <!-- Monogram & Status -->
+  <g font-family="monospace" font-size="13" fill="#96958F" letter-spacing="3">
+    <text x="80" y="95">MEHDI DEHGHAN // PORTFOLIO</text>
+    <text x="1120" y="95" text-anchor="end" fill="#C6F36A">● AVAILABLE FOR COMMISSIONS</text>
+  </g>
+
+  <!-- Big Name -->
+  <text x="80" y="240" font-family="'Syne', 'Inter', -apple-system, sans-serif" font-weight="800" font-size="78" fill="#F4F1EA" letter-spacing="-1">
+    MEHDI DEHGHAN
+  </text>
+  
+  <text x="80" y="310" font-family="'Vazirmatn', -apple-system, sans-serif" font-weight="700" font-size="46" fill="#C6F36A">
+    مهدی دهقان — طراح و توسعه‌دهنده خلاق
+  </text>
+
+  <!-- Concept Statement -->
+  <text x="80" y="385" font-family="'Inter', sans-serif" font-weight="400" font-size="28" fill="#F4F1EA">
+    Designing digital experiences with a point of view.
+  </text>
+  <text x="80" y="425" font-family="'Inter', sans-serif" font-weight="400" font-size="18" fill="#96958F">
+    EXPERIMENTAL DESIGN. PRECISE EXECUTION.
+  </text>
+
+  <!-- Services Tags -->
+  <g transform="translate(80, 485)">
+    <rect x="0" y="0" width="145" height="36" rx="18" fill="#2A2C29" stroke="#3D403B"/>
+    <text x="72.5" y="23" font-family="monospace" font-size="11" fill="#F4F1EA" text-anchor="middle">WEB DESIGN</text>
+
+    <rect x="160" y="0" width="200" height="36" rx="18" fill="#2A2C29" stroke="#3D403B"/>
+    <text x="260" y="23" font-family="monospace" font-size="11" fill="#F4F1EA" text-anchor="middle">CREATIVE DEVELOPMENT</text>
+
+    <rect x="375" y="0" width="150" height="36" rx="18" fill="#2A2C29" stroke="#3D403B"/>
+    <text x="450" y="23" font-family="monospace" font-size="11" fill="#F4F1EA" text-anchor="middle">E-COMMERCE</text>
+
+    <rect x="540" y="0" width="160" height="36" rx="18" fill="#2A2C29" stroke="#3D403B"/>
+    <text x="620" y="23" font-family="monospace" font-size="11" fill="#F4F1EA" text-anchor="middle">LANDING PAGES</text>
+  </g>
+
+  <!-- Footer coordinates -->
+  <text x="80" y="555" font-family="monospace" font-size="12" fill="#666762" letter-spacing="2">
+    IRAN // 35.83° N, 50.99° E · DIGITAL PLAYGROUND ARCHIVE
+  </text>
+  <text x="1120" y="555" font-family="monospace" font-size="12" fill="#666762" text-anchor="end" letter-spacing="2">
+    GITHUB PAGES READY
+  </text>
+</svg>

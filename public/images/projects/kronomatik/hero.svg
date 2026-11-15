@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="100%" height="100%">
+  <defs>
+    <radialGradient id="dialGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#181a1b"/>
+      <stop offset="70%" stop-color="#0c0d0e"/>
+      <stop offset="100%" stop-color="#050607"/>
+    </radialGradient>
+    <radialGradient id="limeGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#c6f36a" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#c6f36a" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="gridPattern" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#ffffff" stroke-opacity="0.04" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="800" fill="#0c0d0e"/>
+  <rect width="1200" height="800" fill="url(#gridPattern)"/>
+
+  <!-- Telemetry Header Grid -->
+  <g font-family="monospace" font-size="12" fill="#717578" letter-spacing="2">
+    <text x="60" y="70">SYS://HOROLOGICAL_CORE_v4.2</text>
+    <text x="60" y="92">COORDS: 45.4642° N, 9.1900° E (MILANO) // 35.6892° N, 51.3890° E (TEHRAN)</text>
+    <text x="1140" y="70" text-anchor="end" fill="#c6f36a">300M / 1000FT SUBMERSIBLE</text>
+    <text x="1140" y="92" text-anchor="end">CALIBRE KM-8902 AUTOMATIC</text>
+  </g>
+
+  <!-- Watch Dial Construct -->
+  <g transform="translate(600, 420)">
+    <!-- Outer Glow -->
+    <circle r="310" fill="url(#limeGlow)"/>
+
+    <!-- Case Outer -->
+    <circle r="260" fill="#141517" stroke="#2a2c30" stroke-width="8"/>
+    <circle r="248" fill="none" stroke="#3d4046" stroke-width="2" stroke-dasharray="4 6"/>
+
+    <!-- Dial Bezel -->
+    <circle r="225" fill="url(#dialGlow)" stroke="#1a1c1e" stroke-width="4"/>
+
+    <!-- Bezel Tick Marks -->
+    <!-- 60 ticks -->
+    <g stroke="#4f545c" stroke-width="1.5">
+      <line x1="0" y1="-218" x2="0" y2="-200" stroke="#c6f36a" stroke-width="3"/>
+      <line x1="150" y1="-150" x2="138" y2="-138"/>
+      <line x1="218" y1="0" x2="200" y2="0" stroke="#c6f36a" stroke-width="3"/>
+      <line x1="150" y1="150" x2="138" y2="138"/>
+      <line x1="0" y1="218" x2="0" y2="200" stroke="#c6f36a" stroke-width="3"/>
+      <line x1="-150" y1="150" x2="-138" y2="138"/>
+      <line x1="-218" y1="0" x2="-200" y2="0" stroke="#c6f36a" stroke-width="3"/>
+      <line x1="-150" y1="-150" x2="-138" y2="-138"/>
+    </g>
+
+    <!-- Concentric Technical Rings -->
+    <circle r="160" fill="none" stroke="#25272a" stroke-width="1"/>
+    <circle r="120" fill="none" stroke="#25272a" stroke-width="1" stroke-dasharray="8 8"/>
+    <circle r="60" fill="none" stroke="#25272a" stroke-width="1"/>
+
+    <!-- Brand Typography on Dial -->
+    <text x="0" y="-70" font-family="'Syne', 'Inter', sans-serif" font-weight="800" font-size="20" fill="#ffffff" letter-spacing="8" text-anchor="middle">KRONOMATIK</text>
+    <text x="0" y="-48" font-family="monospace" font-size="10" fill="#888c91" letter-spacing="4" text-anchor="middle">MILANO · TEHRAN</text>
+
+    <!-- Subdial / Telemetry Window -->
+    <rect x="-45" y="45" width="90" height="32" rx="4" fill="#08090a" stroke="#2e3238" stroke-width="1"/>
+    <text x="0" y="65" font-family="monospace" font-size="12" fill="#c6f36a" letter-spacing="2" text-anchor="middle">300 M</text>
+    <text x="0" y="105" font-family="monospace" font-size="9" fill="#585c63" letter-spacing="3" text-anchor="middle">ISO 6425 DIVER'S</text>
+
+    <!-- Watch Hands -->
+    <!-- Hour Hand -->
+    <g transform="rotate(305)">
+      <polygon points="-6,15 6,15 4,-110 -4,-110" fill="#e8eaed"/>
+      <line x1="0" y1="-20" x2="0" y2="-100" stroke="#0c0d0e" stroke-width="2"/>
+    </g>
+    <!-- Minute Hand -->
+    <g transform="rotate(62)">
+      <polygon points="-5,20 5,20 3,-165 -3,-165" fill="#ffffff"/>
+      <line x1="0" y1="-20" x2="0" y2="-155" stroke="#c6f36a" stroke-width="2"/>
+    </g>
+    <!-- Seconds Hand with Counterweight & Lime Tip -->
+    <g transform="rotate(195)">
+      <line x1="0" y1="45" x2="0" y2="-185" stroke="#c6f36a" stroke-width="2"/>
+      <circle cx="0" cy="30" r="4" fill="#c6f36a"/>
+      <circle cx="0" cy="-140" r="5" fill="#c6f36a"/>
+    </g>
+
+    <!-- Center Pin -->
+    <circle r="8" fill="#141517" stroke="#c6f36a" stroke-width="2"/>
+    <circle r="3" fill="#ffffff"/>
+  </g>
+
+  <!-- Technical Axis Crosshairs -->
+  <line x1="120" y1="420" x2="260" y2="420" stroke="#33373d" stroke-width="1" stroke-dasharray="4 4"/>
+  <line x1="940" y1="420" x2="1080" y2="420" stroke="#33373d" stroke-width="1" stroke-dasharray="4 4"/>
+  <line x1="600" y1="120" x2="600" y2="180" stroke="#33373d" stroke-width="1" stroke-dasharray="4 4"/>
+  <line x1="600" y1="660" x2="600" y2="720" stroke="#33373d" stroke-width="1" stroke-dasharray="4 4"/>
+
+  <!-- Footer Telemetry -->
+  <g font-family="monospace" font-size="11" fill="#585c63" letter-spacing="2">
+    <text x="60" y="740">EXP_02 // HAUTE UTILITARIAN HOROLOGY</text>
+    <text x="1140" y="740" text-anchor="end">STATUS: IN_DEVELOPMENT · DESIGN_SYSTEM_ACTIVE</text>
+  </g>
+</svg>

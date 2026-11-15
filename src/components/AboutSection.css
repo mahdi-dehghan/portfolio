@@ -1,0 +1,205 @@
+.about-section {
+  max-width: var(--site-max-width);
+  margin: var(--space-4xl) auto;
+  padding-inline: clamp(16px, 4vw, 48px);
+}
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-3xl);
+  margin-top: var(--space-xl);
+}
+
+@media (min-width: 960px) {
+  .about-grid {
+    grid-template-columns: 1.2fr 1fr;
+    gap: var(--space-4xl);
+  }
+}
+
+.about-narrative-col {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.about-headline {
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 2.4vw, 2.2rem);
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+}
+
+html[dir="rtl"] .about-headline {
+  font-family: var(--font-persian);
+  letter-spacing: 0;
+  line-height: 1.45;
+}
+
+.about-text-body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.about-text-body p {
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+
+.tenets-card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-inline-start: 3px solid var(--accent-lime);
+  padding: var(--space-lg);
+  border-radius: var(--radius-sm);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  margin-top: var(--space-xs);
+}
+
+.tenets-label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-weight: 700;
+}
+
+.tenets-body {
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.about-location-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  padding: 8px 14px;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-full);
+  width: fit-content;
+}
+
+/* Specs Column */
+.about-specs-col {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xl);
+}
+
+.specs-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.specs-group-header {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  border-bottom: 1px solid var(--border-subtle);
+  padding-bottom: var(--space-xs);
+}
+
+.disciplines-stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.discipline-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-md);
+  padding: var(--space-md);
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  transition: border-color var(--duration-fast) ease, transform var(--duration-fast) ease;
+}
+
+.discipline-item:hover {
+  border-color: var(--border-medium);
+  transform: translateX(4px);
+}
+
+html[dir="rtl"] .discipline-item:hover {
+  transform: translateX(-4px);
+}
+
+.discipline-num {
+  font-size: 0.75rem;
+  color: var(--accent-lime);
+  background-color: var(--text-primary);
+  padding: 2px 6px;
+  border-radius: var(--radius-xs);
+  font-weight: 700;
+}
+
+.discipline-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.discipline-title {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+html[dir="rtl"] .discipline-title {
+  font-family: var(--font-persian);
+}
+
+.discipline-desc {
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* Tool Pills */
+.tools-pills-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tool-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: var(--radius-full);
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  transition: all var(--duration-fast) ease;
+}
+
+.tool-pill:hover {
+  color: var(--text-primary);
+  border-color: var(--accent-lime);
+  background-color: var(--accent-lime-tint);
+}
+
+.tool-check {
+  color: var(--accent-lime);
+}
