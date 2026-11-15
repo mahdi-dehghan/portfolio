@@ -56,8 +56,8 @@ export const siteConfig: SiteConfig = {
   socials: {
     github: {
       label: 'GitHub',
-      url: 'https://github.com/Mehdii-dehghanm',
-      handle: 'Mehdii-dehghanm',
+      url: 'https://github.com/mahdi-dehghan',
+      handle: 'mahdi-dehghan',
     },
     linkedin: {
       label: 'LinkedIn',
