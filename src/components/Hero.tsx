@@ -59,17 +59,22 @@ export const Hero: React.FC<HeroProps> = ({
           {language === 'en' ? (
             <div className="monument-en">
               <div className="monument-row row-1">
-                <span className="monument-lettering">MEHDI</span>
-                <span className="monument-inline-badge mono">
-                  <span className="badge-slash">//</span> DESIGNER
-                </span>
+                <span className="monument-lettering lettering-mehdi">MEHDI</span>
+                <div className="monument-badges-group">
+                  <span className="monument-inline-badge mono">
+                    <span className="badge-slash">//</span> DESIGNER
+                  </span>
+                  <span className="monument-pill">
+                    <span className="pill-dot"></span>
+                    CREATIVE DEV
+                  </span>
+                </div>
               </div>
+
               <div className="monument-row row-2">
-                <span className="monument-pill">
-                  <span className="pill-dot"></span>
-                  CREATIVE DEV
+                <span className="monument-lettering outline-text lettering-dehghan">
+                  DEHGHAN
                 </span>
-                <span className="monument-lettering outline-text">DEHGHAN</span>
               </div>
             </div>
           ) : (

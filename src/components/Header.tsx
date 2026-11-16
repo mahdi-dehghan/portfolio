@@ -56,7 +56,7 @@ export const Header: React.FC<HeaderProps> = ({
             </span>
             <span className="brand-status">
               <span className="status-dot"></span>
-              {t.nav.availableBadge}
+              <span className="status-text-label">{t.nav.availableBadge}</span>
             </span>
           </div>
         </a>
@@ -113,11 +113,11 @@ export const Header: React.FC<HeaderProps> = ({
 
         {/* Global Controls & Toggles */}
         <div className="header-controls">
-          {/* Playground Toggle */}
+          {/* Playground Toggle - Desktop only */}
           {onTogglePlayground && (
             <button
               type="button"
-              className={`ctrl-btn playground-toggle ${isPlaygroundActive ? 'active' : ''}`}
+              className={`ctrl-btn playground-toggle desktop-only ${isPlaygroundActive ? 'active' : ''}`}
               onClick={() => {
                 playClick();
                 onTogglePlayground();
@@ -131,10 +131,10 @@ export const Header: React.FC<HeaderProps> = ({
             </button>
           )}
 
-          {/* Audio Feedback Toggle */}
+          {/* Audio Feedback Toggle - Desktop only */}
           <button
             type="button"
-            className={`ctrl-btn icon-only ${isAudioEnabled ? 'audio-on' : ''}`}
+            className={`ctrl-btn icon-only audio-toggle desktop-only ${isAudioEnabled ? 'audio-on' : ''}`}
             onClick={() => {
               toggleAudio();
               playClick();
@@ -149,7 +149,7 @@ export const Header: React.FC<HeaderProps> = ({
           {/* Theme Switcher */}
           <button
             type="button"
-            className="ctrl-btn icon-only"
+            className="ctrl-btn icon-only theme-toggle"
             onClick={() => {
               playClick();
               toggleTheme();
@@ -187,7 +187,7 @@ export const Header: React.FC<HeaderProps> = ({
             }}
             aria-label="Toggle Menu"
           >
-            {mobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
+            {mobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
           </button>
         </div>
       </div>
@@ -238,6 +238,37 @@ export const Header: React.FC<HeaderProps> = ({
                 </button>
               </li>
             </ul>
+
+            {/* Mobile Drawer Action Items: Playground & Sound */}
+            <div className="mobile-drawer-actions">
+              {onTogglePlayground && (
+                <button
+                  type="button"
+                  className={`mobile-action-pill ${isPlaygroundActive ? 'active' : ''}`}
+                  onClick={() => {
+                    playClick();
+                    onTogglePlayground();
+                  }}
+                >
+                  <Sparkles size={16} />
+                  <span>{t.nav.playground}</span>
+                </button>
+              )}
+
+              <button
+                type="button"
+                className={`mobile-action-pill ${isAudioEnabled ? 'active' : ''}`}
+                onClick={() => {
+                  toggleAudio();
+                  playClick();
+                }}
+              >
+                {isAudioEnabled ? <Volume2 size={16} /> : <VolumeX size={16} />}
+                <span>
+                  {isAudioEnabled ? t.telemetry.soundActive : t.telemetry.soundMuted}
+                </span>
+              </button>
+            </div>
 
             <div className="mobile-drawer-footer">
               <div className="mobile-status mono">
