@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useLanguage } from '../i18n/LanguageContext';
 import { useTheme } from '../hooks/useTheme';
 import { useAudio } from '../hooks/useAudio';
-import { Sun, Moon, Volume2, VolumeX, Menu, X, Sparkles } from 'lucide-react';
+import { Sun, Moon, Volume2, VolumeX, Menu, X, Sparkles, Globe } from 'lucide-react';
 import './Header.css';
 
 interface HeaderProps {
@@ -146,6 +146,23 @@ export const Header: React.FC<HeaderProps> = ({
             {isAudioEnabled ? <Volume2 size={16} /> : <VolumeX size={16} />}
           </button>
 
+          {/* Language Switcher Pill - Always visible & prioritized */}
+          <button
+            type="button"
+            className="lang-switcher-pill"
+            onClick={() => {
+              playClick();
+              toggleLanguage();
+            }}
+            onMouseEnter={playHover}
+            aria-label="Switch Language / تغییر زبان"
+          >
+            <Globe size={13} className="lang-globe-icon" />
+            <span className={`lang-opt ${language === 'en' ? 'active' : ''}`}>EN</span>
+            <span className="lang-divider">/</span>
+            <span className={`lang-opt ${language === 'fa' ? 'active' : ''}`}>فا</span>
+          </button>
+
           {/* Theme Switcher */}
           <button
             type="button"
@@ -159,22 +176,6 @@ export const Header: React.FC<HeaderProps> = ({
             aria-label="Toggle Theme"
           >
             {theme === 'dark' ? <Sun size={16} /> : <Moon size={16} />}
-          </button>
-
-          {/* Language Switcher Pill */}
-          <button
-            type="button"
-            className="lang-switcher-pill"
-            onClick={() => {
-              playClick();
-              toggleLanguage();
-            }}
-            onMouseEnter={playHover}
-            aria-label="Switch Language / تغییر زبان"
-          >
-            <span className={`lang-opt ${language === 'en' ? 'active' : ''}`}>EN</span>
-            <span className="lang-divider">/</span>
-            <span className={`lang-opt ${language === 'fa' ? 'active' : ''}`}>فا</span>
           </button>
 
           {/* Mobile Menu Hamburger */}
@@ -196,6 +197,30 @@ export const Header: React.FC<HeaderProps> = ({
       {mobileMenuOpen && (
         <div className="mobile-drawer frosted-glass">
           <nav className="mobile-nav" aria-label="Mobile Navigation">
+            {/* Quick Language Toggle in Drawer */}
+            <div className="mobile-drawer-lang-row">
+              <span className="mono drawer-label">
+                <Globe size={14} />
+                <span>{language === 'fa' ? 'زبان / LANGUAGE' : 'LANGUAGE / زبان'}</span>
+              </span>
+              <button
+                type="button"
+                className="mobile-drawer-lang-toggle"
+                onClick={() => {
+                  playClick();
+                  toggleLanguage();
+                }}
+              >
+                <span className={`lang-tab ${language === 'en' ? 'active' : ''}`}>
+                  English (LTR)
+                </span>
+                <span className="divider">/</span>
+                <span className={`lang-tab ${language === 'fa' ? 'active' : ''}`}>
+                  فارسی (RTL)
+                </span>
+              </button>
+            </div>
+
             <ul className="mobile-nav-list">
               <li>
                 <button
